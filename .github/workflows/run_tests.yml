@@ -6,12 +6,12 @@ on:
 jobs:
   test:
     runs-on: ubuntu-latest
-
+    name: Tests
     steps:
       - name: Checkout repo
         uses: actions/checkout@v4
       - name: Setup python
-        uses: action/setup-python@v4
+        uses: action/setup-python@v5
         with:
           python-version: "3.12"
       - name: Install Firefox
