@@ -29,11 +29,11 @@ jobs:
       - name: install dependencies
         run: pip install -r requirements.txt
       - name: first_test
-        if: "github.event.deployment.target == 'first_test'"
+        if: "github.event.inputs.deployment_target == 'first_test'"
         run: pytest test/test_simple_button.py::test_simple_button
       - name: second_test
-        if: "github.event.deployment.target == 'second_test'"
+        if: "github.event.inputs.deployment_target == 'second_test'"
         run: pytest test/test_simple_button.py::test_simple_button_page_title
       - name: all_tests
-        if: "github.event.deployment.target == 'all_tests'"
+        if: "github.event.inputs.deployment_target == 'all_tests'"
         run: pytest -v
