@@ -4,6 +4,7 @@ import allure
 
 
 @allure.feature('Simple button')
+@allure.story('Existence')
 def test_simple_button(browser):
     home_page = HomePage(browser)
     home_page.open()
@@ -13,6 +14,7 @@ def test_simple_button(browser):
 
 
 @allure.feature('Simple button')
+@allure.story('Click ability')
 def test_simple_button_page_title(browser):
     home_page = HomePage(browser)
     home_page.open()

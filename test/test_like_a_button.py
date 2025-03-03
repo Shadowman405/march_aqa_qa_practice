@@ -4,6 +4,8 @@ from pages.like_a_button_page import LikeAButtonPage
 import allure
 
 
+@allure.feature('Like a button')
+@allure.story('Existence')
 def test_simple_button(browser):
     home_page = HomePage(browser)
     home_page.open()
@@ -14,6 +16,8 @@ def test_simple_button(browser):
     like_a_button_page.check_simple_like_a_button()
 
 
+@allure.feature('Like a button')
+@allure.story('Click ability')
 def test_simple_button_page_title(browser):
     home_page = HomePage(browser)
     home_page.open()
